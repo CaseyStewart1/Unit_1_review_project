@@ -1,7 +1,10 @@
 const mole = document.querySelectorAll('.mole');
 const startB = document.getElementById('start');
+const shotClock = document.getElementById('shotClock');
 let score = 0;
 let dots = 0;
+let timeLeft = 10;
+let timerID = setInterval(countdown, 1000);
 startB.addEventListener('click', start);
 
 function points() {
@@ -13,6 +16,8 @@ function start() {
   scoreBoard.textContent = 0;
   score = false;
   GlennsGreat();
+  //new timer count down
+  //when zero stopFunction
 }
 
 function hit(i) {
@@ -38,27 +43,28 @@ function GlennsGreat() {
   }, crazyTime);
   //repeat
 }
-setInterval(() => {
+repetition = setInterval(() => {
   GlennsGreat();
-  dots++;
-  if (dots === 15) {
-    clearInterval(GlennsGreat);
-  }
-}, 700);
+}, 1000);
 ///////////////////////////////////////////////////////
 function randoTimer(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
-console.log(randoTimer(1000, 7000));
 
-// document.querySelectorAll('.mole').forEach((mole) => {
-//   mole.addEventListener('click', () => {
-//     points(), hit();
-//   });
-// });
+/////// EL for all moles/////////
 for (let i = 0; i < mole.length; i++) {
   mole[i].addEventListener('click', () => {
     points(i), hit(i);
   });
 }
-//
+///////////////// shotclock ///////////
+function countdown() {
+  if (timeLeft == -1) {
+    clearTimeout(timerID);
+    clearInterval(repetition);
+    mole[i].style.visibility = 'hidden';
+  } else {
+    shotClock.innerHTML = timeLeft + 's';
+    timeLeft--;
+  }
+}
