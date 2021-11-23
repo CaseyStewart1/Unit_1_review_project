@@ -3,7 +3,7 @@ const startB = document.getElementById('start');
 const shotClock = document.getElementById('shotClock');
 let score = 0;
 let dots = 0;
-let timeLeft = 10;
+let timeLeft = 20;
 let timerID = setInterval(countdown, 1000);
 startB.addEventListener('click', start);
 
