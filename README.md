@@ -4,7 +4,9 @@
 
 ### By Casey Stewart
 
-#### [LinkedIn](www.linkedin.com) [Behance](behance.com) [GitHub](www.github.com)
+#### [LinkedIn](https://www.linkedin.com/in/casey-stewart-4b2156bb/) [Behance](https://www.behance.net/CaseyStewart) [GitHub](https://github.com/CaseyStewart1)
+
+#### [Trello](https://trello.com/b/xWrrfU8e/whack-a-mole)
 
 \*\*\*
 
